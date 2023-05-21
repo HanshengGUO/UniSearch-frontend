@@ -1,8 +1,20 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div class="index-page">
+    <a-input-search
+      v-model:value="searchText"
+      placeholder="input search text"
+      enter-button
+      @search="onSearch"
+    />
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script setup lang="ts">
+import { ref } from "vue";
+
+const searchText = ref<string>("");
+
+const onSearch = (value: string) => {
+  alert(value);
+};
+</script>
