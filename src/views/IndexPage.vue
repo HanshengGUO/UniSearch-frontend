@@ -26,6 +26,7 @@ import { ref } from "vue";
 import PostList from "@/components/PostList.vue";
 import PictureList from "@/components/PictureList.vue";
 import UserList from "@/components/UserList.vue";
+import MyDivider from "@/components/MyDivider.vue";
 
 const searchText = ref<string>("");
 const activeKey = ref("post");
