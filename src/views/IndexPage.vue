@@ -9,13 +9,13 @@
     <MyDivider />
     <a-tabs v-model:activeKey="activeKey" @change="onTabChange">
       <a-tab-pane key="post" tab="文章">
-        <PostList :post-list="postList" />
+        <PostList />
       </a-tab-pane>
       <a-tab-pane key="picture" tab="图片">
-        <PictureList :picture-list="pictureList" />
+        <PictureList />
       </a-tab-pane>
       <a-tab-pane key="user" tab="用户">
-        <UserList :user-list="userList" />
+        <UserList />
       </a-tab-pane>
     </a-tabs>
   </div>
@@ -23,6 +23,9 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import PostList from "@/components/PostList.vue";
+import PictureList from "@/components/PictureList.vue";
+import UserList from "@/components/UserList.vue";
 
 const searchText = ref<string>("");
 const activeKey = ref("post");
